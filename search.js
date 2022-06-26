@@ -4,3 +4,12 @@ function searchReddit() {
     console.log("url: ", url);
     window.location.href = url;
 }
+
+// Get the input field
+var input = document.getElementById("inputText");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search").click();
+  }
+});
