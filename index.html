@@ -5,19 +5,19 @@
     <script src="./search.js"></script>
     <script>
         const observer = new MutationObserver(function (mutations, mutationInstance) {
-        const search = document.getElementById('search');
-        if (index) {
-            handleSearch(index);
-            mutationInstance.disconnect();
+            const search = document.getElementById('search');
+            if (index) {
+                handleSearch(index);
+                mutationInstance.disconnect();
 
 
-            document.querySelector('#search').addEventListener('click', function (e) {
+                document.querySelector('#search').addEventListener('click', function (e) {
 
-                searchReddit()
+                    searchReddit()
 
-            });
-        }
-    });</script>
+                });
+            }
+        });</script>
     <link type="text/css" rel="stylesheet" href="input.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
