@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="./search.js"></script>
 
+    <script src="./search.js"></script>
     <script>
         const observer = new MutationObserver(function (mutations, mutationInstance) {
         const search = document.getElementById('search');
@@ -34,6 +34,15 @@
         <button id="search" onclick="searchReddit()">Search</button>
     </div>
 </div>
-
+<script>
+    // Get the input field
+    var input = document.getElementById("inputText");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("search").click();
+        }
+    });
+</script>
 </body>
 </html>
